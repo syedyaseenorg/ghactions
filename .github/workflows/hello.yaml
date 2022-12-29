@@ -1,0 +1,13 @@
+name: hello actions
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  hello:
+    run: echo "Working?"
