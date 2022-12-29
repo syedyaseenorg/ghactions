@@ -14,7 +14,5 @@ jobs:
 
     steps:
       - name: Random name
-        run: echo "This?" /
-        echo "That?"
-        
+        run: echo "This?"
       - run: echo "Working?"
