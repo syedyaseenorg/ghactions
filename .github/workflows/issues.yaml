@@ -1,0 +1,13 @@
+name: Issues action workflow
+
+on:
+  issues:
+    types: [opened]
+    
+jobs:
+  comment-with-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Print github event"
+        run: echo '${{ toJSON(github.event) }}' | jq
+        shell: bash
