@@ -10,4 +10,7 @@ on:
 
 jobs:
   hello:
-    run: echo "Working?"
+    runs-on: ubuntu-latest
+
+    steps:
+      run: echo "Working?"
