@@ -11,3 +11,13 @@ jobs:
       - name: "Print github event"
         run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
+      - name: Create or Update Comment
+        uses: peter-evans/create-or-update-comment@v2.1.0
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            This is a comment added by action
+          reactions: '+1'
+        
+
+    
